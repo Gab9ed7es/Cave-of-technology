@@ -1,0 +1,8 @@
+ let stockProductos = [
+     {id: 1, nombre: "GIGABYTE G5", tipo: "Notebook", desc: "¡La computadora portátil para juegos G5 combina juegos, entretenimiento, trabajo y más!", valor: "mayor", precio: 243600, img: '/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/notebook.jpg', cantidad:1},
+     {id: 2, nombre: "RAIDMAX DK-922PK", tipo: "Silla Gamer", desc: "Cambiar la iluminación con humor, establezca el ambiente para cada ocasión.", valor: "medio", precio: 46800, img: '/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/silla.jpg', cantidad:1},
+     {id: 3, nombre: "EVGA TORQ X10", tipo: "Mouse", desc: "Se puede ajustar para mostrar hasta 7 colores diferentes.", valor: "menor", precio: 6550, img: 'file:///D:/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/mouse.jpg', cantidad:1},
+     {id: 4, nombre: "PCBOX T715M", tipo: "Tablet", desc: "Esta tablet es ideal para cada una de tus actividades.", valor: "menor", precio: 8150, img: '/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/tablet.jpg', cantidad:1},
+     {id: 5, nombre: "PlayStation 5 Standar", tipo: "Consola de videojuegos", desc: "Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días.",valor: "mayor", precio: 202999, img: '/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/consola.jpg', cantidad:1},
+     {id: 6, nombre: "ASUS VP228HE", tipo: "Monitor", desc: "Una experiencia visual de calidad.", valor: "medio", precio: 29880, img: 'file:///D:/Gabriel%20Escobar/Full%20stack/JavaScript/Proyecto%20final%20fversion/img/monitor.jpg', cantidad:1},
+ ]
