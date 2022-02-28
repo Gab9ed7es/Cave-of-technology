@@ -16,6 +16,10 @@ function cargarEventos(){
     compra.calcularTotal();
 
     procesarCompraBtn.addEventListener('click', procesarCompra);
+
+    carrito.addEventListener('change', (e) => { compra.obtenerEvento(e) });
+    carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) });
+
 }
 function procesarCompra(e) {
     e.preventDefault();

@@ -140,7 +140,7 @@
                 <td>
                     <input type="number" class="form-control cantidad" min="1" value= ${producto.cantidad}>
                 </td>
-                <td>${producto.precio * producto.cantidad}</td>
+                <td id="totales" >${producto.precio * producto.cantidad}</td>
                 <td>
                     <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
                 </td>
@@ -182,8 +182,29 @@
 
         document.getElementById('subtotal').innerHTML= "$ " + subTotal;
         document.getElementById('iva').innerHTML= "$ " + iva;
-        document.getElementById('total').innerHTML= "$ " + total.toFixed(2);
+        document.getElementById('total').value= "$ " + total.toFixed(2);
     }
 
-
+    obtenerEvento(e) {
+        e.preventDefault();
+        let id, cantidad, producto, productosLS;
+        if (e.target.classList.contains('cantidad')) {
+            producto = e.target.parentElement.parentElement;
+            id = producto.querySelector('a').getAttribute('data-id');
+            cantidad = producto.querySelector('input').value;
+            let actualizarMontos = document.querySelectorAll('#totales');
+            productosLS = this.obtenerProductosLocalStorage();
+            productosLS.forEach(function (productoLS, index) {
+                if (productoLS.id === id) {
+                    productoLS.cantidad = cantidad;                    
+                    actualizarMontos[index].innerHTML = Number(cantidad * productosLS[index].precio);
+                }    
+            });
+            localStorage.setItem('productos', JSON.stringify(productosLS));
+            
+        }
+        else {
+            console.log("click afuera");
+        }
+    }
 }
